@@ -11,7 +11,7 @@ function frameIt() {
 }
 
 function pressIt() {
-  $('form').on('keydown', function(key) {
+  $(document).on('keydown', function(key) {
     if (key.which == 71) {
       alert('g was pressed')
     }
@@ -19,11 +19,16 @@ function pressIt() {
 }
 
 function submitIt() {
-  $('')
+  $('form').on('submit', function(){
+    alert('Your form is going ot be submitted now.')
+  })
 }
 
 $(document).ready(function(){
 
-// call functions here
+getIt()
+frameIt()
+pressIt()
+submitIt()
 
 });
